@@ -1,0 +1,25 @@
+\section{Aufgabe 5}
+\[
+\sum_{k=1}^\infty \frac{1}{k(k+1)} = 1 \quad \text{und} \quad S_n = \sum_{k=1}^n \frac{1}{k(k+1)}.
+\]
+Die Terme \(\frac{1}{k(k+1)}\) können mittels Partialbruchzerlegung geschrieben werden als:
+\[
+\frac{1}{k(k+1)} = \frac{1}{k} - \frac{1}{k+1}.
+\]
+\[
+\Rightarrow S_n = \left( \frac{1}{1} - \frac{1}{2} \right) + \left( \frac{1}{2} - \frac{1}{3} \right) + \dots + \left( \frac{1}{n} - \frac{1}{n+1} \right) = 1 - \frac{1}{n+1}
+\]
+\[
+\Rightarrow |S_n - 1| = \left| 1 - \frac{1}{n+1} - 1 \right| = \frac{1}{n+1}.
+\]
+Wir wollen also nun: 
+\[
+\frac{1}{n+1} < \varepsilon \quad \Leftrightarrow \quad n+1 > \frac{1}{\varepsilon}.
+\]
+\[
+\Rightarrow n > \frac{1}{\varepsilon} - 1.
+\]
+Da \(n \in \mathbb{N}\) gilt, ist die kleinste natürliche Zahl, die diese Ungleichung erfüllt:
+\[
+N_\varepsilon = \left\lceil \frac{1}{\varepsilon} - 1 \right\rceil,
+\]

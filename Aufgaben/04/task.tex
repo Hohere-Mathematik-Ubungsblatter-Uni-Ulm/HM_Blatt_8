@@ -1,0 +1,17 @@
+\section{Aufgabe 4}
+    $$\text{Wir untersuchen: }a_n=\frac{n(n+3)-4}{n^2-1}, n>1$$
+    \subsection{a)} 
+        $$\frac{n(n+3)-4}{n^2-1}=\frac{n^2+3n-4}{n^2-1}$$
+        $$\Rightarrow |a_n-1|=|\frac{n^2+3n-4}{n^2-1}-1|=|\frac{n^2+3n-4-n^2+1}{n^2-1}|=|\frac{3n-3}{n^2-1}|<\frac{1}{100}=\varepsilon$$
+        $$\Rightarrow 3n-1<\frac{n^2-1}{100}\Leftrightarrow 300n-300<n^2-1\Leftrightarrow n^2-300n+299>0$$
+        $$\Rightarrow n_{1,2} = \frac{300\pm\sqrt{300^2-4\cdot1\cdot299}}{2}=\frac{300\pm\sqrt{90000-1196}}{2}=\frac{300\pm\sqrt{88804}}{2}\approx\frac{300\pm298}{2}$$
+        Dies ergibt $n_1\approx299,n_2\approx1$. Da aber $n>1$ sein muss, Rechnen wir mit $n=299$ \\
+        $$\Rightarrow n=299 \Rightarrow N = 299$$
+        Somit ist für $\varepsilon=\frac{1}{100}, N=299$, sodass für alle $n\geq299, |a_n-1|<\frac{1}{100}$
+    \subsection{b)}
+        Wir suchen zuerst den Grenzwert von $a_n$:
+        $$\lim_{n\to\infty}a_n=\lim_{n\to\infty}\frac{n^3+3n-4}{n^2-1}=\lim_{n\to\infty}\frac{1+\frac{3}{n}-\frac{4}{n^2}}{1-\frac{1}{n^2}}=\frac{\lim_{n\to\infty}1+\frac{3}{n}-\frac{4}{n^2}}{\lim_{n\to\infty}1-\frac{1}{n^2}}=\frac{1+0-0}{1-0}=1$$
+        Wir zeigen nun die Konvergenz nach dem $\varepsilon$-Kriterium:
+        $$\text{Aus des a) können wir entnehmen: }|a_n-1|=|\frac{3n-3}{n^2-1}|$$
+        $$|\frac{3n-3}{n^2-1}|<|\frac{3n-3}{n^2}|=|\frac{3(n-1)}{n^2}|=|\frac{3}{n}-\frac{3}{n^2}|$$
+        Für ein beliebiges $\varepsilon>0$, wählen wir $N \in \NN$, sodass $\frac{3}{N}<\varepsilon$, womit wir für alle $n\geq N:|a_n-1|<\varepsilon$

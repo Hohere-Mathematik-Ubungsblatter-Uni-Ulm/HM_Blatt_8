@@ -1,0 +1,58 @@
+\section{Aufgabe 7}
+    \subsection{Umfang:}
+        \subsubsection{Ausdehnung nach außen:}
+            Der Umfang des Dreiecks \( T_n \) in der \( n \)-ten Iteration berechnet sich wie folgt: Nach n Iterationen hat man $3\cdot4^n$ Seiten, die jeweils $\frac{a}{3^n}$ lang sind: 
+            \[
+            U_n = a \cdot 3 \cdot \left(\frac{4}{3}\right)^n
+            \]
+            \[
+            U_\infty = \lim_{n \to \infty} U_n = \lim_{n\to\infty}3a\left(\frac{4}{3}\right)^n\to \infty
+            \]
+    
+        \subsubsection{Ausdehnung nach innen:}
+            Der Umfang folgt denselben Regeln wie bei der Ausdehnung nach außen. Auch hier gilt:
+            \[
+            U_\infty = \infty
+            \]
+    
+    \subsection{Flächeninhalt}
+        \subsubsection{Ausdehnung nach außen}
+            Die Fläche des Startdreiecks \( T_0 \) mit Seitenlänge \( a \) ist:
+            \[
+            A_0 = \frac{\sqrt{3}}{4} a^2
+            \]
+            Durch Abziehen der mit jeder Iteration entstehenden Lücke ergibt sich die Formel:
+            \[
+            A_\infty = A_0 + \sum_{k=1}^\infty \frac{\sqrt{3}}{4} a^2 \cdot \frac{3 \cdot 4^{k-1}}{9^k}
+            \]
+            \[
+            \Leftrightarrow A_\infty = \frac{\sqrt{3}}{4} a^2 \left(1 + \sum_{k=1}^\infty \frac{3 \cdot 4^{k-1}}{9^k}\right)
+            \]
+            Vereinfachen der Reihe:
+            \[
+            \sum_{k=1}^\infty \frac{3 \cdot 4^{k-1}}{9^k} = \frac{3}{9} \sum_{k=1}^\infty \left(\frac{4}{9}\right)^{k-1} = \frac{3}{9} \cdot \frac{9}{5} = \frac{3}{5}
+            \]
+            \[
+            \Rightarrow A_\infty = \frac{\sqrt{3}}{4} a^2 \cdot \frac{8}{5} = \frac{2\sqrt{3}}{5} a^2
+            \]
+            
+        \subsubsection{Ausdehnung nach innen}
+            Die Fläche des Startdreiecks \( T_0 \) mit Seitenlänge \( a \) ist:
+            \[
+            A_0 = \frac{\sqrt{3}}{4} a^2
+            \]
+            Durch Abziehen der mit jeder Iteration entstehenden Lücke ergibt sich die Formel:
+            \[
+            A_\infty = A_0 - \sum_{k=1}^\infty \frac{\sqrt{3}}{4} a^2 \cdot \frac{3 \cdot 4^{k-1}}{9^k}
+            \]
+            \[
+            \Leftrightarrow A_\infty = \frac{\sqrt{3}}{4} a^2 \left(1 - \sum_{k=1}^\infty \frac{3 \cdot 4^{k-1}}{9^k}\right)
+            \]
+            Vereinfachen der Reihe:
+            \[
+            \sum_{k=1}^\infty \frac{3 \cdot 4^{k-1}}{9^k} = \frac{3}{9} \sum_{k=1}^\infty \left(\frac{4}{9}\right)^{k-1} = \frac{3}{9} \cdot \frac{9}{5} = \frac{3}{5}
+            \]
+            \[
+            \Rightarrow A_\infty = \frac{\sqrt{3}}{4} a^2 \cdot \frac{2}{5} = \frac{\sqrt{3}}{10} a^2
+            \]
+        

@@ -1,0 +1,25 @@
+\section{Aufgabe 2}
+    Wir berechnen $\lim_{n \to \infty}\frac{\sum_{i=0}^ra_in^i}{\sum_{j=0}^sb_jn^j}:=\lim_{n \to \infty}c_n$
+    \subsection{Fall 1: $r > s$}
+        Dann ist der Grad des Polynoms $\sum_{i=0}^ra_in^i$ größer als der Grad des Polynoms $\sum_{j=0}^sb_jn^j$ \\
+        $\Rightarrow $ Nach Umformen des Bruches ist der Grad im Zähler $n^{s-r}$ und der Grad im Nenner $n^0$ \\
+        $\Rightarrow \text{ für } r>s $ divergiert die Folge
+        
+    \subsection{Fall 2: $r < s$}
+        Dann ist der Grad des Polynoms $\sum_{i=0}^ra_in^i$ kleiner als der Grad des Polynoms $\sum_{j=0}^sb_jn^j$ \\
+        $\Rightarrow $ Nach Umformen des Bruches ist der Grad im Nenner $n^{s-r}$ und der Grad im Zähler $n^0$ \\
+        $\Rightarrow \text{ für } r<s \text{ gilt } \lim_{n \to \infty}c_n=0$
+    \subsection{Fall 3: $r = s$}
+        $$\\lim_{n \to \infty}\frac{\sum_{i=0}^ra_in^i}{\sum_{j=0}^sb_jn^j}=
+        \lim_{n \to \infty}\frac{\sum_{i=0}^ra_in^i}{\sum_{i=0}^rb_in^i}
+        =\frac{\lim_{n \to \infty}n^r\sum_{i=0}^r\frac{a_i}{n^{r-i}}}{\lim_{n \to \infty}n^r\sum_{i=0}^r\frac{b_i}{n^{r-i}}}
+        =\frac{\lim_{n \to \infty}\sum_{i=0}^r\frac{a_i}{n^{r-i}}}{\lim_{n \to \infty}\sum_{i=0}^r\frac{b_i}{n^{r-i}}}
+        =\frac{a_r}{b_r}
+        =\frac{a_r}{b_s}$$
+
+    $\Rightarrow \lim_{n \to \infty}\frac{\sum_{i=0}^ra_in^i}{\sum_{j=0}^sb_jn^j} = 
+    \begin{cases}
+        \infty, & \text{wenn } r > s \\
+        0, & \text{wenn } r < s \\
+        \frac{a_r}{b_s}, & \text{wenn } r = s
+    \end{cases}$

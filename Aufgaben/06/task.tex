@@ -1,0 +1,6 @@
+\section{Aufgabe 6}
+$$\prod_{k=1}^{\infty}(3^{k})^{(\frac{1}{3})^k}=\prod_{k=0}^{\infty}3^{k\cdot(\frac{1}{3})^k}=3^{\sum_{k=0}^{\infty}k\cdot(\frac{1}{3})^k}$$
+Wir evaluieren zuerst die Reihe im Exponent:
+$$\sum_{k=0}^{\infty}k\cdot(\frac{1}{3})^k=\frac{\frac{1}{3}}{(1-\frac{1}{3})^2}=\frac{\frac{1}{3}}{\frac{4}{9}}=\frac{1}{3}\cdot \frac{9}{4}=\frac{9}{12}=\frac{3}{4}$$
+Wir haben hierbei die gewichtete Geometrische Reihe $\sum_{k=0}^{\infty}kx^k=\frac{x}{(1-x)^2} \text{ für } |x| < 1$ genutzt und können es anwenden da in unserem Fall $x=\frac{1}{3}<1$
+$$\Rightarrow 3^{\sum_{k=0}^{\infty}k\cdot(\frac{1}{3})^k}=3^{\frac{3}{4}}\approx2,2795$$
